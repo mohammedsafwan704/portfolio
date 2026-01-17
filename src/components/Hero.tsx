@@ -86,16 +86,10 @@ const Hero = () => {
               onClick={scrollToProjects}
               className="group px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
-              View Projects
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+              Download Resume
+              
             </button>
-            <button
-              onClick={scrollToContact}
-              className="group px-8 py-4 bg-transparent border-2 border-amber-400 text-amber-400 rounded-full font-semibold text-lg hover:bg-amber-400 hover:text-gray-900 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
-            >
-              Contact Me
-              <Download className="group-hover:translate-y-1 transition-transform" size={20} />
-            </button>
+            
           </div>
         </div>
       </div>

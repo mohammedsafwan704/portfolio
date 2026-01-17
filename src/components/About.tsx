@@ -1,67 +1,78 @@
-import { GraduationCap, Target, Lightbulb } from 'lucide-react';
-
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Me</span>
+            About{" "}
+            <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+              Me
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div data-aos="fade-right">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl blur-2xl opacity-20"></div>
-              <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-amber-500/50 transition-all duration-300">
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Hello! I'm <span className="text-amber-400 font-semibold">Mohammed Safwan</span>, a passionate digital marketing enthusiast with a strong educational foundation in commerce. As a B.Com graduate, I've developed a keen understanding of business dynamics and consumer behavior.
-                </p>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Currently pursuing advanced digital marketing studies, I'm dedicated to mastering the art of creating impactful online campaigns, driving engagement, and helping brands achieve their goals in the digital landscape.
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Main Card */}
+        <div
+          className="relative bg-gradient-to-br from-gray-800 to-gray-900 
+                     rounded-2xl border border-gray-700 
+                     hover:border-amber-500/50 
+                     transition-all duration-500 
+                     p-8 md:p-10"
+          data-aos="fade-up"
+        >
+          <div className="grid md:grid-cols-2 gap-10 items-center">
 
-          <div className="space-y-6" data-aos="fade-left">
-            <div className="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-amber-500/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg group-hover:shadow-lg group-hover:shadow-amber-500/50 transition-all duration-300">
-                  <GraduationCap className="text-white" size={28} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Education</h3>
-                  <p className="text-gray-400">B.Com Graduate with a strong foundation in business and commerce principles</p>
-                </div>
-              </div>
-            </div>
+            {/* Image */}
+            <div className="relative group flex justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 
+                              rounded-xl blur-2xl opacity-20 
+                              group-hover:opacity-40 transition duration-500"></div>
 
-            <div className="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg group-hover:shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300">
-                  <Target className="text-white" size={28} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Current Focus</h3>
-                  <p className="text-gray-400">Mastering digital marketing strategies, SEO, and social media management</p>
-                </div>
-              </div>
+              <img
+                src="/images/me.jpg"
+                alt="Mohammed Safwan"
+                className="relative w-70 md:w-72 h-81 object-cover 
+                           rounded-xl border-2 border-amber-500/40
+                           transform group-hover:scale-105
+                           transition-all duration-500 shadow-xl"
+              />
             </div>
 
-            <div className="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg group-hover:shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
-                  <Lightbulb className="text-white" size={28} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Passion</h3>
-                  <p className="text-gray-400">Creating innovative digital solutions that drive real business results</p>
-                </div>
-              </div>
-            </div>
+            {/* Content */}
+            <div className="text-gray-300 text-lg leading-relaxed">
+  <p className="mb-6">
+    Hello! I'm{" "}
+    <span className="text-amber-400 font-semibold">
+      Mohammed Safwan
+    </span>
+    , a passionate digital marketing enthusiast with a strong foundation in
+    commerce as a{" "}
+    <span className="text-white font-medium">B.Com graduate</span>. My academic
+    background has helped me develop a clear understanding of business models,
+    consumer behavior, and market trends.
+  </p>
+
+  <p className="mb-6">
+    Currently, I am advancing my expertise in{" "}
+    <span className="text-white font-medium">Digital Marketing</span>, where I
+    focus on building result-driven strategies using SEO, social media
+    marketing, content creation, and performance analytics. I enjoy combining
+    creativity with data to create campaigns that connect brands with the
+    right audience.
+  </p>
+
+  <p>
+    I am highly motivated, detail-oriented, and continuously learning to stay
+    updated with the latest digital trends and tools. My goal is to help
+    businesses grow their online presence, improve engagement, and achieve
+    measurable success in the digital landscape.
+  </p>
+</div>
+
+
           </div>
         </div>
       </div>
