@@ -1,5 +1,13 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram, Send } from 'lucide-react';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Github,
+  Instagram,
+  Send,
+} from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +20,9 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -58,36 +68,60 @@ const Contact = () => {
     },
   ];
 
+  // ✅ FINAL SOCIAL LINKS (Twitter removed)
   const socialLinks = [
-    { icon: Linkedin, link: '#', color: 'hover:text-blue-500' },
-    { icon: Twitter, link: '#', color: 'hover:text-sky-400' },
-    { icon: Github, link: '#', color: 'hover:text-gray-400' },
-    { icon: Instagram, link: '#', color: 'hover:text-pink-500' },
+    {
+      icon: Linkedin,
+      link: 'https://www.linkedin.com/in/mohammedsafwan03/',
+      color: 'hover:text-blue-500',
+    },
+    {
+      icon: Github,
+      link: 'https://github.com/mohammedsafwan704',
+      color: 'hover:text-gray-400',
+    },
+    {
+      icon: Instagram,
+      link: 'https://www.instagram.com/_safwan_7622/',
+      color: 'hover:text-pink-500',
+    },
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get In <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Touch</span>
+            Get In{' '}
+            <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+              Touch
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto rounded-full"></div>
-          <p className="text-gray-400 mt-4 text-lg">Let's work together on your next project</p>
+          <p className="text-gray-400 mt-4 text-lg">
+            Let's work together on your next project
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div data-aos="fade-right">
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Contact Information
+              </h3>
               <div className="space-y-4">
                 {contactInfo.map((info) => (
                   <a
                     key={info.title}
                     href={info.link}
-                    className="group flex items-center gap-4 p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+                    className="group flex items-center gap-4 p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:scale-105"
                   >
-                    <div className={`p-3 bg-gradient-to-br ${info.gradient} rounded-lg group-hover:shadow-lg transition-all duration-300`}>
+                    <div
+                      className={`p-3 bg-gradient-to-br ${info.gradient} rounded-lg group-hover:shadow-lg transition-all duration-300`}
+                    >
                       <info.icon className="text-white" size={24} />
                     </div>
                     <div>
@@ -106,7 +140,9 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.link}
-                    className={`p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-110 ${social.color}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:scale-110 ${social.color}`}
                   >
                     <social.icon size={24} />
                   </a>
@@ -116,7 +152,9 @@ const Contact = () => {
 
             <div className="mt-8 p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700">
               <p className="text-gray-300 leading-relaxed">
-                I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+                I'm always interested in hearing about new projects and
+                opportunities. Whether you have a question or just want to say
+                hi, feel free to reach out!
               </p>
             </div>
           </div>
@@ -124,7 +162,10 @@ const Contact = () => {
           <div data-aos="fade-left">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-white font-semibold mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-white font-semibold mb-2"
+                >
                   Your Name
                 </label>
                 <input
@@ -140,7 +181,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-white font-semibold mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-white font-semibold mb-2"
+                >
                   Your Email
                 </label>
                 <input
@@ -156,7 +200,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-white font-semibold mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-white font-semibold mb-2"
+                >
                   Subject
                 </label>
                 <input
@@ -172,7 +219,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white font-semibold mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-white font-semibold mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -189,7 +239,9 @@ const Contact = () => {
 
               {submitSuccess && (
                 <div className="p-4 bg-green-500/20 border border-green-500 rounded-lg">
-                  <p className="text-green-400 text-center font-semibold">Message sent successfully!</p>
+                  <p className="text-green-400 text-center font-semibold">
+                    Message sent successfully!
+                  </p>
                 </div>
               )}
 
