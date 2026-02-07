@@ -82,15 +82,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up delay-400">
-            <button
-              onClick={scrollToProjects}
-              className="group px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
-            >
-              Download Resume
-              
-            </button>
-            
-          </div>
+  <a
+    href="/MohammedSafwanCV.pdf"
+    download="Mohammed_Safwan_Resume.pdf"
+    className="group px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+  >
+    Download Resume
+  </a>
+</div>
+
         </div>
       </div>
 
